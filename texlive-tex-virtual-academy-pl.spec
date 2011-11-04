@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-tex-virtual-academy-pl
-Version:	20111103
+Version:	20111104
 Release:	1
 Summary:	TeXLive tex-virtual-academy-pl package
 Group:		Publishing
