@@ -16,8 +16,6 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-virtual-acade
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 TeXLive tex-virtual-academy-pl package.
@@ -474,7 +472,6 @@ TeXLive tex-virtual-academy-pl package.
 %doc %{_texmfdistdir}/doc/generic/tex-virtual-academy-pl/tex/tex.html
 %doc %{_texmfdistdir}/doc/generic/tex-virtual-academy-pl/tex/tex_key.html
 %doc %{_texmfdistdir}/doc/generic/tex-virtual-academy-pl/tex/tryby.html
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -485,5 +482,3 @@ TeXLive tex-virtual-academy-pl package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
