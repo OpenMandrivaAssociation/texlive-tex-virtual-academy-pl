@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-tex-virtual-academy-pl
 Version:	20111104
-Release:	7
+Release:	8
 Summary:	TeXLive tex-virtual-academy-pl package
 Group:		Publishing
 URL:		http://tug.org/texlive
