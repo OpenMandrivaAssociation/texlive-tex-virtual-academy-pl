@@ -1,5 +1,5 @@
 Name:		texlive-tex-virtual-academy-pl
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	TeXLive tex-virtual-academy-pl package
 Group:		Publishing
