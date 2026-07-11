@@ -1,29 +1,21 @@
-Name:		texlive-tex-virtual-academy-pl
-Version:	67718
+%global tl_name tex-virtual-academy-pl
+%global tl_revision 67718
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
 Release:	1
-Summary:	TeXLive tex-virtual-academy-pl package
+Summary:	TeX usage web pages, in Polish
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-virtual-academy-pl.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-virtual-academy-pl.doc.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/info/tex-virtual-academy-pl
+License:	fdl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-virtual-academy-pl.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-virtual-academy-pl.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive tex-virtual-academy-pl package.
+TeX Virtual Academy is a bundle of Polish documentation in HTML format
+about TeX and Co. It contains information for beginners, LaTeX packages,
+descriptions, etc.
 
-#-----------------------------------------------------------------------
-%files
-%doc %{_texmfdistdir}/doc/generic/tex-virtual-academy-pl
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar doc %{buildroot}%{_texmfdistdir}
